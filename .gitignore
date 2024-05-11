@@ -25,3 +25,4 @@ stripe.exe
 .env
 .env.dev
 DYP_FYP_Details.txt
+.env.layout
