@@ -148,7 +148,7 @@ app.post('/stripe/uncancel', async  (req, res) => {
 				customer: user.customerId,
 				limit: 1,
 			  });
-			  console.log(`subscriptions`,subscriptions.data[0].id)
+			//   console.log(`subscriptions`,subscriptions.data[0].id)
 
 			let update = stripe.subscriptions.update(subscriptions.data[0].id, {
 				cancel_at_period_end: false,

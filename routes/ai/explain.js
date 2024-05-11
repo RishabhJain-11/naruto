@@ -32,7 +32,7 @@ app.post('/personal/explain', async (req, res, next) => {
 
   
 		const gptResponse = await openai.complete({
-			engine: 'gpt-3.5-turbo-instruct',
+			engine: 'davinci',
 			prompt,
 			maxTokens: 128,
 			temperature: 0.5,

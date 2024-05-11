@@ -16,9 +16,9 @@ app.post('/helloworld', async (req, res, next) => {
 	prompt += inputRaw
 
 	const gptResponse = await openai.complete({
-		engine: 'gpt-3.5-turbo-instruct',
+		engine: 'curie',
 		prompt,
-		maxTokens: 400,
+		maxTokens: 150,
 		temperature: 0.2,
 		topP: 1,
 		frequencyPenalty: 1,
@@ -29,7 +29,6 @@ app.post('/helloworld', async (req, res, next) => {
 		stream: false,
 		stop: ["###", "<|endoftext|>", ],
 	});
-	console.log(gptResponse)
 
 	let output = `${gptResponse.data.choices[0].text}`
 

@@ -20,7 +20,7 @@ app.post('/personal/summarize', async (req, res, next) => {
 	prompt += inputRaw
 
 	const gptResponse = await openai.complete({
-		engine: 'gpt-3.5-turbo-instruct',
+		engine: 'curie',
 		prompt,
 		maxTokens: 150,
 		temperature: 0.2,

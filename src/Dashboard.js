@@ -88,7 +88,7 @@ class Body extends Component {
 				<Divider />
 				</> : null}
 
-			{/* {this.business.length ? <>
+			{this.business.length ? <>
 				<Title title="Business" />
 				<Grid>
 					{this.business.map((tool, index) => 
@@ -104,7 +104,7 @@ class Body extends Component {
 						/>)} 
 				</Grid>
 				<Divider />
-			</> : null} */}
+			</> : null}
 
 			{this.personal.length ? <>
 				<Title title="Personal" />

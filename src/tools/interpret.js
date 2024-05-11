@@ -42,7 +42,7 @@ const obj = {
 				placeholder: "JavaScript...", 
 				label: "Which language are you using, will enable markup highlights",
 				type: "text",
-				maxLength: 500,
+				maxLength: 40,
 				// options: [{ title: "2nd Grader", value: "2nd Grader", desc: "Explain this like I'm 5 years old", Icon: AnnotationIcon },],
 				// max: 100,
 				min: 3,
@@ -75,8 +75,6 @@ const obj = {
 				"It defines a new function called `HelloWorld` that takes a single argument called `text`",
 				"The body of the function is a single line of code that prints out the value of `text` if it is defined, or `Hello World` if it is not defined."
 			],
-			maxLength: 20000,
-			type: "code",
 			// Icon: TerminalIcon,
 			// color: "gray",
 		}
