@@ -22,3 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 stripe.exe
+.env
+.env.dev
+DYP_FYP_Details.txt
