@@ -37,7 +37,7 @@ app.post('/business/jobad', async (req, res, next) => {
 	
   
 	const gptResponse = await openai.complete({
-		engine: 'davinci',
+		engine: 'gpt-3.5-turbo-instruct',
 		prompt,
 		maxTokens: 250,
 		temperature: 0.5,
