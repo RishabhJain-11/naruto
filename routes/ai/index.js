@@ -1,4 +1,3 @@
-
 const express = require('express');
 const openai = require('../middlewares/openai');
 const { 
@@ -21,6 +20,9 @@ app.use('/', require('./jobad'));
 app.use('/', require('./helloworld'));
 app.use('/', require('./example'));
 app.use('/', require('./texterrordetection'));
+app.use('/', require('./simpleexplanation'));
+app.use('/', require('./algoexplain'));
+app.use('/', require('./conceptexplainer'));
 
 app.use('/', contentFilterCheck); 
 app.use('/', creditPayment); 
