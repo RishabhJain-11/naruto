@@ -3,14 +3,17 @@ const openai = require("../middlewares/openai");
 
 let app = express.Router();
 
-app.post("/example", async (req, res, next) => {
+app.post("/texterrordetection", async (req, res, next) => {
   try {
     let { content } = req.body;
 
-    let prompt = `This is a Chatbot that Answer questions from a user:\n`;
+    let promptStart = `I encountered an error while working on a task. The error message is as follows: \n`;
 
     let inputRaw = `${content}`; // here is where people enter stuff
-    prompt += inputRaw;
+
+    let promptEnd = `\n Could you please provide a solution or guidance to resolve this error?`
+    
+    let prompt = promptStart + inputRaw + promptEnd;
 
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",

@@ -54,9 +54,9 @@ class EntryInput extends Component {
 	@computed get currentNumberOfCharacters(){
 
 		let currentCharacters = this.props.prompt.value.length
-		let maxCharacters = 80
+		let maxCharacters = 800
 		if(this.props.prompt.type === "textarea"){
-			maxCharacters = 400
+			maxCharacters = 4000
 		}
 		if(this.props.prompt.maxLength){
 			maxCharacters = this.props.prompt.maxLength

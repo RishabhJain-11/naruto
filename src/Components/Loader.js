@@ -64,13 +64,10 @@ const BounceThree = styled.div`
     opacity: 0.5;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0; 
     -webkit-animation: ${bounce} 3.0s infinite ease-in-out;
     animation: ${bounce} 3.0s infinite ease-in-out;
     animation-delay: -2.0s;
 `;
-
-
- 
 
 export default Loader
