@@ -26,3 +26,4 @@ stripe.exe
 .env.dev
 DYP_FYP_Details.txt
 .env.layout
+ignore/routes/ai
