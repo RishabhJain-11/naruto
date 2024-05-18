@@ -3,7 +3,16 @@
         "algoexplain",
         "conceptexplainer",
         "jobad",
+        "openai",
         "simpleexplanation",
         "texterrordetection"
-    ]
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:fyp}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
+    }
 }

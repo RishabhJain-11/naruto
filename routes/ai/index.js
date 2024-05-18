@@ -23,7 +23,8 @@ app.use("/", require("./texterrordetection"));
 app.use("/", require("./simpleexplanation"));
 app.use("/", require("./algoexplain"));
 app.use("/", require("./conceptexplainer"));
-
+app.use("/", require("./javatocpp"))
+app.use("/", require("./javascripttotypescript"))
 
 app.use("/", contentFilterCheck);
 app.use("/", creditPayment);
