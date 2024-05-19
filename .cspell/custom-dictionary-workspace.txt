@@ -1,4 +1,15 @@
 # Custom Dictionary Words
+bruteforce
+codeoptimizer
+cssmaker
+dsahelper
+htmlmaker
 javascripttotypescript
 javatocpp
+mlhelper
 openai
+projectideas
+pythonconverter
+sqlcommandmaker
+sqlexplainer
+tailwindmaker

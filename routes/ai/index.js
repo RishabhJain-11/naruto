@@ -23,8 +23,20 @@ app.use("/", require("./texterrordetection"));
 app.use("/", require("./simpleexplanation"));
 app.use("/", require("./algoexplain"));
 app.use("/", require("./conceptexplainer"));
-app.use("/", require("./javatocpp"))
-app.use("/", require("./javascripttotypescript"))
+app.use("/", require("./javatocpp"));
+app.use("/", require("./javascripttotypescript"));
+app.use("/", require("./dsahelper"));
+app.use("/", require("./sqlexplainer"));
+app.use("/", require("./sqlcommandmaker"));
+app.use("/", require("./codeoptimizer"));
+app.use("/", require("./projectideas"));
+app.use("/", require("./tailwindmaker"));
+app.use("/", require("./cssmaker"));
+app.use("/", require("./pythonconverter"));
+app.use("/", require("./htmlmaker"));
+app.use("/", require("./devops"));
+app.use("/", require("./mlhelper"));
+
 
 app.use("/", contentFilterCheck);
 app.use("/", creditPayment);
