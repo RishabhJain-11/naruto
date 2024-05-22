@@ -2,20 +2,20 @@ import { ViewListIcon } from "@heroicons/react/solid";
 
 const obj = {
   title: "Theoretical Explanation of Algorithm",
-  desc: "Detect errors easily with the help of this Error Detection Platform, be it any form of error.",
+  desc: "Gives theory based answers of the Algorithm Asked",
   category: "Programming",
   Icon: ViewListIcon,
   // tags: [],
   permissions: ["user"],
 
-  fromColor: "gray-500",
-  toColor: "gray-500",
+  fromColor: "blue-600",
+  toColor: "yellow-500",
 
   to: "/ai/algoexplain",
   api: "/ai/algoexplain",
 
   output: {
-    title: "Example",
+    title: "Algorithm Explanation",
     desc: "The following key points detected",
     Icon: false,
     color: "blue",
@@ -23,15 +23,15 @@ const obj = {
 
   prompts: [
     {
-      title: "Entry Text",
-      desc: "A sentence or paragraph you wish to understand in bullet point form.",
+      title: "Enter Algorithm Name",
+      desc: "An algorithm you wish to understand.",
       // n: 1,
       prompts: [
         {
-          title: "Content",
+          title: "Algorithm Input",
           attr: "content",
           value: "",
-          placeholder: "When doing an your taxes, it's important to...",
+          placeholder: "Bubble Sort Algorithm...",
           label: "",
           type: "textarea",
           maxLength: 600,
@@ -39,18 +39,11 @@ const obj = {
           min: 3,
           required: true,
           error: "",
-          example: "Hello World ",
+          example: "Insertion Sort",
         },
       ],
       example: {
-        output:
-          "Hello World Hello World Hello World Hello World Hello World Hello World Hello World ",
-        // outputs: [
-        // 	"The sun is very old, over 4.5 billion years",
-        // 	"At 10,000 degrees, sun is also very hot",
-        // 	"Gasses called coronal mass ejections erupt from the sun",
-        // ],
-        // Icon: RefreshIcon,
+        output: `HelloWorld`,
         color: "blue",
       },
     },

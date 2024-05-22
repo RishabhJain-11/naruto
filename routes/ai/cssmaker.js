@@ -5,21 +5,21 @@ let app = express.Router();
 
 app.post("/cssmaker", async (req, res, next) => {
   try {
-    let { code, desc } = req.body;
+    let { content, desc } = req.body;
 
     let promptStart = `Give me necessary css classes to the code given below : \n`;
 
     // eslint-disable-next-line no-useless-concat
-    let inputRaw = `# Code\n` + `${code}\n \n`;
+    let inputRaw = `# Code\n` + `${content} \n\n`;
 
-    let promptEnd = `Description of where to add classes ${desc}`;
+    let promptEnd = `Description of where to add classes: \n\n ${desc}`;
 
     let prompt = promptStart + inputRaw + promptEnd;
 
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 1500,
+      maxTokens: 10000,
       temperature: 0.2,
       topP: 1,
       frequencyPenalty: 1,

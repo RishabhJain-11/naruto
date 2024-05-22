@@ -1,19 +1,20 @@
-const express = require('express');
-const openai = require('../middlewares/openai');
+const express = require("express");
+const openai = require("../middlewares/openai");
 
-let app = express.Router()
+let app = express.Router();
 
-app.post('/pythonconverter', async (req, res, next) => {
+app.post("/pythonconverter", async (req, res, next) => {
   try {
     let { content, language } = req.body;
 
-    let promptStart = `Take the following Python Code to ${language} Code \n`  
-    let prompt = promptStart + content
+    let promptStart = `Take the following Python Code to ${language} Code \n`;
+    let inputRaw = `Code: ${content} \n`;
+    let prompt = promptStart + inputRaw;
 
     const gptResponse = await openai.complete({
-      engine: 'gpt-3.5-turbo-instruct',
+      engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 1000,
+      maxTokens: 10000,
       temperature: 0.5,
       topP: 1,
       frequencyPenalty: 0,
@@ -21,7 +22,7 @@ app.post('/pythonconverter', async (req, res, next) => {
       bestOf: 1,
       user: req.user._id,
       stream: false,
-      stop: ['# Code', '# Explanation', ""],
+      stop: ["# Code", "# Explanation", ""],
     });
 
     // Assuming the response is in gptResponse.data.choices[0].text
@@ -30,7 +31,10 @@ app.post('/pythonconverter', async (req, res, next) => {
     // Create the response object in code format
     const response = {
       code: content,
-      explanation: explanation.split('\n').map(line => line.trim()).filter(line => line)
+      explanation: explanation
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line),
     };
 
     req.locals.input = prompt;
@@ -40,7 +44,7 @@ app.post('/pythonconverter', async (req, res, next) => {
     next();
   } catch (err) {
     console.log(err);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send("Internal Server Error");
   }
 });
 

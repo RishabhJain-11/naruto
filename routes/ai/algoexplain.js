@@ -9,19 +9,19 @@ app.post("/algoexplain", async (req, res, next) => {
 
     let promptStart = `Please explain the theory behind the following algorithm term: \n`;
 
-    let inputRaw = `${content}`; // here is where people enter stuff
+    let inputRaw = `${content} \n`; // here is where people enter stuff
 
     let promptEnd = `\n Considerations and Filters:
     \n 1. Ensure the explanation is precise and directly related to the given topic.
     \n 2. Avoid repeating sentences or using unnecessary words.
-    \n 3. Use unique words only when necessary for clarity and accuracy of the algorithm.`
-    
+    \n 3. Use unique words only when necessary for clarity and accuracy of the algorithm.`;
+
     let prompt = promptStart + inputRaw + promptEnd;
 
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 150,
+      maxTokens: 1000,
       temperature: 0.2,
       topP: 1,
       frequencyPenalty: 1,

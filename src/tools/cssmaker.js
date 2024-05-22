@@ -1,8 +1,8 @@
 import { ViewListIcon } from "@heroicons/react/solid";
 
 const obj = {
-  title: "Simple Explanation of Terms",
-  desc: "This is the simple explanation of coding based terms.",
+  title: "CSS Helper",
+  desc: "This helps you in the Designing and Frontend Part",
   category: "Programming",
   Icon: ViewListIcon,
   // tags: [],
@@ -11,12 +11,12 @@ const obj = {
   fromColor: "gray-500",
   toColor: "gray-500",
 
-  to: "/ai/simpleexplanation",
-  api: "/ai/simpleexplanation",
+  to: "/ai/cssmaker",
+  api: "/ai/cssmaker",
 
   output: {
     title: "Answer",
-    desc: "Accurate answer for the term you asked.",
+    desc: "CSS Classes you asked for.",
     Icon: false,
     color: "blue",
   },
@@ -28,13 +28,27 @@ const obj = {
       // n: 1,
       prompts: [
         {
-          title: "Coding Term",
+          title: "Code Input",
           attr: "content",
           value: "",
-          placeholder: "Enter the term here... for e.g. Decentralized Finance",
+          placeholder: "Enter the Code you want to add CSS For...",
+          label: "",
+          type: "code",
+          maxLength: 10000,
+          // max: 100,
+          min: 3,
+          required: true,
+          error: "",
+          example: "Distributed Systems",
+        },
+        {
+          title: "Description",
+          attr: "desc",
+          value: "",
+          placeholder: "Enter the description of where to add the classes in the code",
           label: "",
           type: "textarea",
-          maxLength: 100,
+          maxLength: 10000,
           // max: 100,
           min: 3,
           required: true,

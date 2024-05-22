@@ -7,14 +7,14 @@ app.post("/htmlmaker", async (req, res, next) => {
   try {
     let { content } = req.body;
 
-    let promptStart = `Can you give me complete with proper indentation and  HTML Code for the following description : \n`;
-    let desc = `Description: ${content} `;
+    let promptStart = `Can you give me complete code with proper indentation and  HTML Code for the following description : \n`;
+    let desc = `Description: \n\n ${content} `;
     let prompt = promptStart + desc;
 
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 1000,
+      maxTokens: 10000,
       temperature: 0.5,
       topP: 1,
       frequencyPenalty: 0,

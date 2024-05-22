@@ -13,7 +13,7 @@ app.post('/devops', async (req, res, next) => {
     const gptResponse = await openai.complete({
       engine: 'gpt-3.5-turbo-instruct',
       prompt,
-      maxTokens: 1000,
+      maxTokens: 10000,
       temperature: 0.5,
       topP: 1,
       frequencyPenalty: 0,

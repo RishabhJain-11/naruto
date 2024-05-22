@@ -1,8 +1,8 @@
 import { ViewListIcon } from "@heroicons/react/solid";
 
 const obj = {
-  title: "Concept Explainer",
-  desc: "Explanation your Computer Science Fundamentals with ease.",
+  title: "Optimization of Code",
+  desc: "This is the optimization of the code given.",
   category: "Programming",
   Icon: ViewListIcon,
   // tags: [],
@@ -11,40 +11,39 @@ const obj = {
   fromColor: "gray-500",
   toColor: "gray-500",
 
-  to: "/ai/conceptexplainer",
-  api: "/ai/conceptexplainer",
+  to: "/ai/codeoptimizer",
+  api: "/ai/codeoptimizer",
 
   output: {
-    title: "Explained Output",
-    desc: "The following key points detected",
+    title: "Answer",
+    desc: "Optimized version of the code you asked.",
     Icon: false,
     color: "blue",
   },
 
   prompts: [
     {
-      title: "Concept Description",
-      desc: "A sentence or description you wish to understand in bullet point form.",
+      title: "Input",
+      desc: "Enter the code block you want to optimize",
       // n: 1,
       prompts: [
         {
-          title: "Content",
+          title: "Code Block",
           attr: "content",
           value: "",
-          placeholder: "Concept of Mining in Blockchain...",
+          placeholder: "Enter the code here...",
           label: "",
           type: "textarea",
-          maxLength: 600,
+          maxLength: 10000,
           // max: 100,
           min: 3,
           required: true,
           error: "",
-          example: "Hello World ",
+          example: "Distributed Systems",
         },
       ],
       example: {
         output: `Hello World`,
-        // Icon: RefreshIcon,
         color: "blue",
       },
     },

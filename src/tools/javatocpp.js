@@ -2,8 +2,8 @@ import { ChevronRightIcon } from "@heroicons/react/solid";
 import { EyeIcon } from "@heroicons/react/outline";
 
 const obj = {
-  title: "Java Language to C++ Language",
-  desc: "Conversion of Java Code to C++ Language in easy way.",
+  title: "Java Language to Any Language",
+  desc: "Conversion of Java Code to any language you want in an easy way.",
   category: "Programming",
   Icon: EyeIcon,
   // tags: [],
@@ -47,7 +47,6 @@ const obj = {
           label: "Which language are you using, will enable markup highlights",
           type: "text",
           maxLength: 40,
-          // options: [{ title: "2nd Grader", value: "2nd Grader", desc: "Explain this like I'm 5 years old", Icon: AnnotationIcon },],
           // max: 100,
           min: 3,
           required: true,

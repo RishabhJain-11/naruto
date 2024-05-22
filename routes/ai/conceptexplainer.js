@@ -7,21 +7,23 @@ app.post("/conceptexplainer", async (req, res, next) => {
   try {
     let { content } = req.body;
 
-    let promptStart = `Could you make me understand this concept: \n`;
+    let promptStart = `Could you make me understand this Computer Science concept: \n`;
 
-    let inputRaw = `${content}`; // here is where people enter stuff
+    let inputRaw = `${content} \n`; // here is where people enter stuff
 
-    let promptEnd = `\n Considerations and Filters:
+    let promptEnd = `
+    \n Give all the information in bullet points format.
+    \n Considerations and Filters:
     \n 1. Ensure the explanation is precise and directly related to the given topic.
     \n 2. Avoid repeating sentences or using unnecessary words.
-    \n 3. Use unique words only when necessary for clarity and accuracy.`
-    
+    \n 3. Use unique words only when necessary for clarity and accuracy.`;
+
     let prompt = promptStart + inputRaw + promptEnd;
 
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 150,
+      maxTokens: 10000,
       temperature: 0.2,
       topP: 1,
       frequencyPenalty: 1,

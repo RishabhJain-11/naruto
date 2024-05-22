@@ -7,13 +7,14 @@ app.post('/javascripttotypescript', async (req, res, next) => {
   try {
     let { content } = req.body;
 
-    let promptStart = `Take the following JavaScript Code and Convert it to the Typescript Code.`  
-    let prompt = promptStart + content
+    let promptStart = `Take the following JavaScript Code and Convert it to the Typescript Code. \n\n ` 
+    let inputRaw = `Code: ${content} \n\n`
+    let prompt = promptStart + inputRaw
 
     const gptResponse = await openai.complete({
       engine: 'gpt-3.5-turbo-instruct',
       prompt,
-      maxTokens: 1000,
+      maxTokens: 10000,
       temperature: 0.5,
       topP: 1,
       frequencyPenalty: 0,

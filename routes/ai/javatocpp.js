@@ -5,15 +5,16 @@ let app = express.Router()
 
 app.post('/javatocpp', async (req, res, next) => {
   try {
-    let { content } = req.body;
+    let { content, language } = req.body;
 
-    let promptStart = `Take the following Java Code and Convert it to the C++ (CPP) Code.`  
-    let prompt = promptStart + content
+    let promptStart = `Take the following Java Code and convert it to the ${language} code. \n`  
+    let inputRaw = `Code : \n\n ${content}`;
+    let prompt = promptStart + inputRaw;
 
     const gptResponse = await openai.complete({
       engine: 'gpt-3.5-turbo-instruct',
       prompt,
-      maxTokens: 1000,
+      maxTokens: 10000,
       temperature: 0.5,
       topP: 1,
       frequencyPenalty: 0,

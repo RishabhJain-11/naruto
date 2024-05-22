@@ -2,8 +2,8 @@ import { ChevronRightIcon } from "@heroicons/react/solid";
 import { EyeIcon } from "@heroicons/react/outline";
 
 const obj = {
-  title: "Javascript Language to Typescript Language",
-  desc: "Conversion of Javascript Code to Typescript Language in easy way.",
+  title: "Machine Learning Helper",
+  desc: "Gives Optimized Jupyter Code",
   category: "Programming",
   Icon: EyeIcon,
   // tags: [],
@@ -12,31 +12,29 @@ const obj = {
   fromColor: "gray-800",
   toColor: "gray-600",
 
-  to: "/ai/javascripttotypescript",
-  api: "/ai/javascripttotypescript",
+  to: "/ai/mlhelper",
+  api: "/ai/mlhelper",
 
   output: {
     title: "Code Output",
-    attr: "content",
-    value: "",
-    placeholder: "class Name(){",
-    label: "Place some code above to understand how it works",
     type: "code",
-    maxLength: 20000,
-    // max: 100,
+    maxLength: 2000,
     min: 3,
     required: true,
     error: "",
     example: `function HelloWorld(text){ 
-	let text || "Hello World"; 
-	console.log(text);
-}`,
+      let text || "Hello World"; 
+      console.log(text);
+  }`,
+    desc: "The following key points detected",
+    Icon: false,
+    color: "blue",
   },
 
   prompts: [
     {
-      title: "Convert the Code",
-      desc: "Write the Javascript Code below",
+      title: "Jupyter Code",
+      desc: "Describe what help you want in short..",
       // n: 1,
       prompts: [
         {
@@ -52,9 +50,9 @@ const obj = {
           required: true,
           error: "",
           example: `function HelloWorld(text){ 
-	let text || "Hello World"; 
-	console.log(text);
-}`,
+      let text || "Hello World"; 
+      console.log(text);
+  }`,
         },
       ],
       example: {
@@ -64,6 +62,8 @@ const obj = {
           "It defines a new function called `HelloWorld` that takes a single argument called `text`",
           "The body of the function is a single line of code that prints out the value of `text` if it is defined, or `Hello World` if it is not defined.",
         ],
+        // Icon: TerminalIcon,
+        // color: "gray",
       },
     },
   ],

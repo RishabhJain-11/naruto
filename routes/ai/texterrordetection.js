@@ -9,16 +9,17 @@ app.post("/texterrordetection", async (req, res, next) => {
 
     let promptStart = `I encountered an error while working on a task. The error message is as follows: \n`;
 
-    let inputRaw = `${content}`; // here is where people enter stuff
+    let inputRaw = `${content} \n`;
 
-    let promptEnd = `\n Could you please provide a solution or guidance to resolve this error?`
-    
+    let promptEnd = `\n Could you please provide a solution or guidance to resolve this error?`;
+
     let prompt = promptStart + inputRaw + promptEnd;
 
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 150,
+      minTokens: 2000,
+      maxTokens: 10000,
       temperature: 0.2,
       topP: 1,
       frequencyPenalty: 1,

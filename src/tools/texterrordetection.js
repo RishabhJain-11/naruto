@@ -1,3 +1,4 @@
+import React from "react";
 import { ViewListIcon } from "@heroicons/react/solid";
 
 const obj = {
@@ -15,26 +16,26 @@ const obj = {
   api: "/ai/texterrordetection",
 
   output: {
-    title: "Example",
-    desc: "The following key points detected",
+    title: "Answer / Solution",
+    desc: "This is the solution for your query.",
     Icon: false,
     color: "blue",
   },
 
   prompts: [
     {
-      title: "Entry Text",
-      desc: "A sentence or paragraph you wish to understand in bullet point form.",
+      title: "Enter the Error Text",
+      desc: "Copy the complete the error and paste it in the Description Box.",
       // n: 1,
       prompts: [
         {
           title: "Content",
           attr: "content",
           value: "",
-          placeholder: "When doing an your taxes, it's important to...",
+          placeholder: "Error Text will be here...",
           label: "",
           type: "textarea",
-          maxLength: 600,
+          maxLength: 6000,
           // max: 100,
           min: 3,
           required: true,
@@ -43,18 +44,12 @@ const obj = {
         },
       ],
       example: {
-        output:
-          "Hello World Hello World Hello World Hello World Hello World Hello World Hello World ",
-        // outputs: [
-        // 	"The sun is very old, over 4.5 billion years",
-        // 	"At 10,000 degrees, sun is also very hot",
-        // 	"Gasses called coronal mass ejections erupt from the sun",
-        // ],
-        // Icon: RefreshIcon,
+        output: `The error messages and warnings you're seeing can be broken down into two main issues:
+        Environment Variables Not Overwritten by dotenv-flow.
+        The messages dotenv-flow: 'VARIABLE_NAME' is already defined in process.env and will not be overwritten indicate that the environment variables are already set in the process.env and dotenv-flow will not overwrite them. This usually happens when environment variables are already defined in your system environment or a previous configuration file.`,
         color: "blue",
       },
     },
   ],
 };
-
 export default obj;

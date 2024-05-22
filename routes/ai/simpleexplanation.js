@@ -21,7 +21,7 @@ app.post("/simpleexplanation", async (req, res, next) => {
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 150,
+      maxTokens: 6000,
       temperature: 0.2,
       topP: 1,
       frequencyPenalty: 1,

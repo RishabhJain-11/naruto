@@ -7,14 +7,14 @@ app.post("/codeoptimizer", async (req, res, next) => {
   try {
     let { content } = req.body;
 
-    let promptStart = `Optimize the given code. Give the best optimal solution, remove the unwanted code, add comments where needed.`;
-    let inputRaw = `# Code\n ${content}`;
+    let promptStart = `Optimize the given code.\n Give the best optimal solution, remove the unwanted code, add comments where needed. \n\n`;
+    let inputRaw = `\n # Code\n ${content}`;
     let prompt = promptStart + inputRaw;
 
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 1000,
+      maxTokens: 10000,
       temperature: 0.5,
       topP: 1,
       frequencyPenalty: 0,

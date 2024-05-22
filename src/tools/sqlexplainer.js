@@ -1,8 +1,8 @@
 import { ViewListIcon } from "@heroicons/react/solid";
 
 const obj = {
-  title: "Simple Explanation of Terms",
-  desc: "This is the simple explanation of coding based terms.",
+  title: "SQL Explainer",
+  desc: "Explain SQL Code",
   category: "Programming",
   Icon: ViewListIcon,
   // tags: [],
@@ -11,30 +11,41 @@ const obj = {
   fromColor: "gray-500",
   toColor: "gray-500",
 
-  to: "/ai/simpleexplanation",
-  api: "/ai/simpleexplanation",
+  to: "/ai/sqlexplainer",
+  api: "/ai/sqlexplainer",
 
   output: {
-    title: "Answer",
-    desc: "Accurate answer for the term you asked.",
-    Icon: false,
-    color: "blue",
+    title: "Output",
+    value: "",
+    // placeholder: "class Name(){",
+    // label: "Place some code above to understand how it works",
+    type: "code",
+    maxLength: 20000,
+    // max: 100,
+    min: 3,
+    required: true,
+    error: "",
+    example: `function HelloWorld(text){ 
+	let text || "Hello World"; 
+	console.log(text);
+}`,
   },
 
   prompts: [
     {
       title: "Input",
-      desc: "Enter the term you want to look for",
+      desc: "Enter the Problem you want to solve",
       // n: 1,
       prompts: [
         {
-          title: "Coding Term",
+          title: "Problem Statement Input",
           attr: "content",
           value: "",
-          placeholder: "Enter the term here... for e.g. Decentralized Finance",
+          placeholder:
+            "For eg... Palindrome String. Give me brute force solution.",
           label: "",
           type: "textarea",
-          maxLength: 100,
+          maxLength: 10000,
           // max: 100,
           min: 3,
           required: true,
