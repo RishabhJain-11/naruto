@@ -3,7 +3,7 @@ import { ViewListIcon } from "@heroicons/react/solid";
 const obj = {
   title: "Theoretical Explanation of Algorithm",
   desc: "Gives theory based answers of the Algorithm Asked",
-  category: "Programming",
+  category: "Explainers",
   Icon: ViewListIcon,
   // tags: [],
   permissions: ["user"],
@@ -34,7 +34,7 @@ const obj = {
           placeholder: "Bubble Sort Algorithm...",
           label: "",
           type: "textarea",
-          maxLength: 600,
+          maxLength: 60,
           // max: 100,
           min: 3,
           required: true,

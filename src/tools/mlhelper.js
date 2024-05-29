@@ -4,7 +4,7 @@ import { EyeIcon } from "@heroicons/react/outline";
 const obj = {
   title: "Machine Learning Helper",
   desc: "Gives Optimized Jupyter Code",
-  category: "Programming",
+  category: "Helpers",
   Icon: EyeIcon,
   // tags: [],
   permissions: ["user"],
@@ -18,7 +18,7 @@ const obj = {
   output: {
     title: "Code Output",
     type: "code",
-    maxLength: 2000,
+    maxLength: 20,
     min: 3,
     required: true,
     error: "",
@@ -43,24 +43,57 @@ const obj = {
           value: "",
           placeholder: "function Name(attr){...",
           label: "Place some code above to understand how it works",
-          type: "code",
-          maxLength: 20000,
+          type: "textarea",
+          maxLength: 20,
           // max: 100,
           min: 3,
           required: true,
           error: "",
-          example: `function HelloWorld(text){ 
-      let text || "Hello World"; 
-      console.log(text);
-  }`,
+          example: `Give me some starting libraries for my project`,
         },
       ],
       example: {
         output: ``,
         outputs: [
-          "The code above is a function definition.",
-          "It defines a new function called `HelloWorld` that takes a single argument called `text`",
-          "The body of the function is a single line of code that prints out the value of `text` if it is defined, or `Hello World` if it is not defined.",
+          `# Importing necessary libraries
+          import numpy as np
+          import pandas as pd
+          import matplotlib.pyplot as plt
+          import seaborn as sns
+          from sklearn.model_selection import train_test_split
+          from sklearn.linear_model import LinearRegression
+          from sklearn.metrics import mean_squared_error
+          
+          # Reading the dataset
+          data = pd.read_csv("dataset.csv")
+          
+          # Preprocessing the data
+          # (Include your data preprocessing steps here)
+          
+          # Splitting the data into training and testing sets
+          X = data.drop("target_column", axis=1)
+          y = data["target_column"]
+          X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+          
+          # Building and training the model
+          model = LinearRegression()
+          model.fit(X_train, y_train)
+          
+          # Making predictions
+          y_pred = model.predict(X_test)
+          
+          # Evaluating the model
+          mse = mean_squared_error(y_test, y_pred)
+          print("Mean Squared Error:", mse)
+          
+          # Visualizing the results
+          plt.figure(figsize=(10, 6))
+          plt.scatter(y_test, y_pred)
+          plt.xlabel("Actual Values")
+          plt.ylabel("Predicted Values")
+          plt.title("Actual vs Predicted Values")
+          plt.show()
+          `,
         ],
         // Icon: TerminalIcon,
         // color: "gray",

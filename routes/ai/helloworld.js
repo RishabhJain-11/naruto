@@ -10,6 +10,7 @@ app.post("/helloworld", async (req, res, next) => {
     let prompt = `Hello World:\n###\n` + ``;
 
     let inputRaw = `TEXT: ${content}\nKEY POINTS: 1.`;
+    
     prompt += inputRaw;
 
     const gptResponse = await openai.complete({

@@ -4,7 +4,7 @@ import { EyeIcon } from "@heroicons/react/outline";
 const obj = {
   title: "Javascript Language to Typescript Language",
   desc: "Conversion of Javascript Code to Typescript Language in easy way.",
-  category: "Programming",
+  category: "Optimization",
   Icon: EyeIcon,
   // tags: [],
   permissions: ["user"],
@@ -22,7 +22,7 @@ const obj = {
     placeholder: "class Name(){",
     label: "Place some code above to understand how it works",
     type: "code",
-    maxLength: 20000,
+    maxLength: 10,
     // max: 100,
     min: 3,
     required: true,

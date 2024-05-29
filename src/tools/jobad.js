@@ -133,7 +133,7 @@ If you are interested, you can apply by contacting us directly at Smith & Co or 
             "accountant 40k can do report, audit, myob, Smith and Co, contact Ryan ryan@co.com",
           label: "",
           type: "textarea",
-          maxLength: 400,
+          maxLength: 40,
           // max: 100,
           // min: 1,
           required: true,

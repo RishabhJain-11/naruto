@@ -3,7 +3,7 @@ import { ViewListIcon } from "@heroicons/react/solid";
 const obj = {
   title: "Concept Explainer",
   desc: "Explanation your Computer Science Fundamentals with ease.",
-  category: "Programming",
+  category: "Explainers",
   Icon: ViewListIcon,
   // tags: [],
   permissions: ["user"],
@@ -34,12 +34,12 @@ const obj = {
           placeholder: "Concept of Mining in Blockchain...",
           label: "",
           type: "textarea",
-          maxLength: 600,
+          maxLength: 60,
           // max: 100,
           min: 3,
           required: true,
           error: "",
-          example: "Hello World ",
+          example: "Hello World",
         },
       ],
       example: {

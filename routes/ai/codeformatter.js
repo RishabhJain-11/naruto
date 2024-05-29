@@ -3,13 +3,17 @@ const openai = require("../middlewares/openai");
 
 let app = express.Router();
 
-app.post("/codeoptimizer", async (req, res, next) => {
+app.post("/codeformatter", async (req, res, next) => {
   try {
     let { content } = req.body;
 
-    let promptStart = `Optimize the given code.\n Give the best optimal solution, remove the unwanted code, add comments where needed. \n\n`;
+    let promptStart = `Format the following code according to best practices:\n\n`;
     let inputRaw = `\n # Code\n ${content}`;
-    let prompt = promptStart + inputRaw;
+    let promptEnd = `Considerations and Filters:
+      \n 1. Ensure the code is clean and readable.
+      \n 2. Follow standard coding conventions.
+      \n 3. Include consistent indentation and spacing.`;
+    let prompt = promptStart + inputRaw + promptEnd;
 
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",

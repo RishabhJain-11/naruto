@@ -7,7 +7,7 @@ const obj = {
 
 	title: "Summarize Points",
 	desc: "Analyze your text or documents and convey the important concepts in bullet form.",
-	category: "Personal",
+	category: "Ideas",
 	Icon: ViewListIcon,
 	// tags: [],
 	permissions: ['user'],
@@ -36,7 +36,7 @@ const obj = {
 				placeholder: "When doing an your taxes, it's important to...", 
 				label: "",
 				type: "textarea",
-				maxLength: 600,
+				maxLength: 60,
 				// max: 100,
 				min: 3,
 				required: true,

@@ -3,7 +3,7 @@ import { ViewListIcon } from "@heroicons/react/solid";
 const obj = {
   title: "Simple Explanation of Terms",
   desc: "This is the simple explanation of coding based terms.",
-  category: "Programming",
+  category: "Explainers",
   Icon: ViewListIcon,
   // tags: [],
   permissions: ["user"],

@@ -19,7 +19,7 @@ app.post("/tailwindmaker", async (req, res, next) => {
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      maxTokens: 15000,
+      maxTokens: 10,
       temperature: 0.2,
       topP: 1,
       frequencyPenalty: 1,

@@ -86,8 +86,7 @@ class SidebarCompontent extends Component {
 											<NavLink to="/"><Logo /></NavLink>
 											</div>
 												<div>
-													<div className="text-4xl relative font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-600 inline-block">OpenAI<span className="font-normal "> Template</span> 
-														<div className="absolute top-0 ml-3 left-full bg-gradient-to-br from-gray-500 to-gray-500 text-white text-sm px-2 py-0.5 rounded-md font-normal hidden md:flex">gpt3</div>
+													<div className="text-4xl relative font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-600 inline-block">Coderise
 													</div>
 													<div className="hidden md:block text-xl text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-500 inline-block">Prepare and create your own OpenAI Prompts and Outputs</div>
 													<div className="flex">

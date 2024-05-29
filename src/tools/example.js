@@ -36,7 +36,7 @@ const obj = {
 				placeholder: "When doing an your taxes, it's important to...", 
 				label: "",
 				type: "textarea",
-				maxLength: 600,
+				maxLength: 60,
 				// max: 100,
 				min: 3,
 				required: true,

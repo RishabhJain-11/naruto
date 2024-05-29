@@ -18,8 +18,8 @@ app.post("/texterrordetection", async (req, res, next) => {
     const gptResponse = await openai.complete({
       engine: "gpt-3.5-turbo-instruct",
       prompt,
-      minTokens: 2000,
-      maxTokens: 10000,
+      // minTokens: 100,
+      maxTokens: 300,
       temperature: 0.2,
       topP: 1,
       frequencyPenalty: 1,

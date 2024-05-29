@@ -21,35 +21,35 @@ class Body extends Component {
   }
 
   @computed get personal() {
-    return this.permissions.filter((tool) => tool.category === "Personal");
+    return this.permissions.filter((tool) => tool.category === "Optimization");
   }
 
   @computed get business() {
-    return this.permissions.filter((tool) => tool.category === "Business");
+    return this.permissions.filter((tool) => tool.category === "Detection");
   }
 
   @computed get social() {
-    return this.permissions.filter((tool) => tool.category === "Social");
+    return this.permissions.filter((tool) => tool.category === "Ideas");
   }
 
   @computed get content() {
-    return this.permissions.filter((tool) => tool.category === "Content");
+    return this.permissions.filter((tool) => tool.category === "Helpers");
   }
 
   @computed get programming() {
-    return this.permissions.filter((tool) => tool.category === "Programming");
+    return this.permissions.filter((tool) => tool.category === "Explainers");
   }
 
   render() {
     return (
       <>
         <Helmet>
-          <title>{`Tools - OpenAI Template`}</title>
+          <title>{`Tools - Coderise`}</title>
         </Helmet>
         <MainBody className="px-4 py-4 md:px-28 md:py-8 lg:py-12 ">
           {this.programming.length ? (
             <>
-              <Title title="Programming" />
+              <Title title="Explainers" />
               <Grid>
                 {this.programming.map((tool, index) => (
                   <Tool
@@ -70,7 +70,7 @@ class Body extends Component {
 
           {this.content.length ? (
             <>
-              <Title title="Written Content" />
+              <Title title="Helpers" />
               <Grid>
                 {this.content.map((tool, index) => (
                   <Tool
@@ -91,7 +91,7 @@ class Body extends Component {
 
           {this.business.length ? (
             <>
-              <Title title="Business" />
+              <Title title="Detection" />
               <Grid>
                 {this.business.map((tool, index) => (
                   <Tool
@@ -112,7 +112,7 @@ class Body extends Component {
 
           {this.personal.length ? (
             <>
-              <Title title="Personal" />
+              <Title title="Optimization" />
               <Grid>
                 {this.personal.map((tool, index) => (
                   <Tool
@@ -133,7 +133,7 @@ class Body extends Component {
 
           {this.social.length ? (
             <>
-              <Title title="Online" />
+              <Title title="Ideas" />
               <Grid>
                 {this.social.map((tool, index) => (
                   <Tool

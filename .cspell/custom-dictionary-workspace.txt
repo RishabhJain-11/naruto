@@ -1,5 +1,6 @@
 # Custom Dictionary Words
 bruteforce
+codeformatter
 codeoptimizer
 cssmaker
 dsahelper

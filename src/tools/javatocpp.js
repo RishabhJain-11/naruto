@@ -4,7 +4,7 @@ import { EyeIcon } from "@heroicons/react/outline";
 const obj = {
   title: "Java Language to Any Language",
   desc: "Conversion of Java Code to any language you want in an easy way.",
-  category: "Programming",
+  category: "Optimization",
   Icon: EyeIcon,
   // tags: [],
   permissions: ["user"],
@@ -22,7 +22,7 @@ const obj = {
     placeholder: "class Name(){",
     // label: "Place some code above to understand how it works",
     type: "code",
-    maxLength: 2000,
+    maxLength: 20,
     // max: 100,
     min: 3,
     required: true,

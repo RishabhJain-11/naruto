@@ -65,7 +65,7 @@ const obj = {
 				placeholder: "An article about how to start coding...", 
 				label: "A short description of what the article will be about",
 				type: "textarea",
-				maxLength: 600,
+				maxLength: 60,
 				// max: 100,
 				// min: 100,
 				// required: true,
